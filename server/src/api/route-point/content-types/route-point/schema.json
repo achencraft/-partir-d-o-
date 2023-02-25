@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "route_points",
+  "info": {
+    "singularName": "route-point",
+    "pluralName": "route-points",
+    "displayName": "Route_Point"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Ordre": {
+      "type": "integer"
+    },
+    "latitude": {
+      "type": "float"
+    },
+    "longitude": {
+      "type": "float"
+    },
+    "route": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::route.route"
+    }
+  }
+}

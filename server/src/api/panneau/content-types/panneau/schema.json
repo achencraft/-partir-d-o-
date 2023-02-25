@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "panneaux",
+  "info": {
+    "singularName": "panneau",
+    "pluralName": "panneaux",
+    "displayName": "Panneau"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "longitude": {
+      "type": "float"
+    },
+    "latitude": {
+      "type": "float"
+    },
+    "Url_photo": {
+      "type": "text"
+    },
+    "Km_lieu": {
+      "type": "decimal"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    },
+    "lieux": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::lieu.lieu"
+    }
+  }
+}

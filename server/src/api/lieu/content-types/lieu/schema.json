@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lieux",
+  "info": {
+    "singularName": "lieu",
+    "pluralName": "lieux",
+    "displayName": "Lieu"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "float"
+    },
+    "longitude": {
+      "type": "float"
+    },
+    "user_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    }
+  }
+}
